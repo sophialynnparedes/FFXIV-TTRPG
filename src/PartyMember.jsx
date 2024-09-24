@@ -17,7 +17,11 @@ export default function PartyMember(props) {
                     <img className="jobIcon" src={props.icon} />
                     <h1>{props.name}</h1>
                 </div>
-                <img className="characterPicture" src={props.image} />
+                <img
+                    className="characterPicture"
+                    id={props.role}
+                    src={props.image}
+                />
                 <div className="stats">
                     <div className="hp">
                         <button

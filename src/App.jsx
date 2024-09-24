@@ -22,10 +22,17 @@ export default function App() {
                 />
                 <PartyMember
                     name="???"
-                    image="LakelandHuntress.webp"
+                    image="lakeland-huntress-3-1689492392.png"
                     icon="Bard.png"
                     HP={24}
                     role="brd"
+                />
+                <PartyMember
+                    name="Jajayako Jajayako"
+                    image="Jajayako.webp"
+                    icon="WhiteMage.png"
+                    HP={24}
+                    role="whm"
                 />
             </div>
         </>
