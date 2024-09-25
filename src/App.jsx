@@ -1,40 +1,25 @@
-import PartyMember from "./PartyMember";
-import "./styles.scss";
+import Navbar from "./Navbar";
+import PageRouter from "./PageRouter";
+import "./Styles/styles.scss";
+import { Router } from "wouter";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebase.jsx";
+import Home from "./Pages/Home.jsx";
 
 export default function App() {
-    return (
-        <>
-            <img id="background" src="background.webp" />
-            <div id="columns">
-                <PartyMember
-                    name="Beverly Brothers"
-                    image="BeveryBrothers.webp"
-                    icon="Warrior.png"
-                    HP={35}
-                    role="war"
-                />
-                <PartyMember
-                    name="Sage Turali"
-                    image="SageTurali1.webp"
-                    icon="BlackMage.png"
-                    HP={21}
-                    role="blm"
-                />
-                <PartyMember
-                    name="???"
-                    image="lakeland-huntress-3-1689492392.png"
-                    icon="Bard.png"
-                    HP={24}
-                    role="brd"
-                />
-                <PartyMember
-                    name="Jajayako Jajayako"
-                    image="Jajayako.webp"
-                    icon="WhiteMage.png"
-                    HP={24}
-                    role="whm"
-                />
-            </div>
-        </>
-    );
+    const [user, loading, error] = useAuthState(auth);
+
+    if (!user) {
+        return <Home />;
+    } else {
+        return (
+            <>
+                <img id="background" src="background.webp" />
+                <Navbar />
+                <Router>
+                    <PageRouter />
+                </Router>
+            </>
+        );
+    }
 }

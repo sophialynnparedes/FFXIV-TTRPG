@@ -14,7 +14,7 @@ export default function PartyMember(props) {
         <>
             <div className="partymember">
                 <div className="name">
-                    <img className="jobIcon" src={props.icon} />
+                    <img className="jobIcon" src={props.icon} loading="lazy" />
                     <h1>{props.name}</h1>
                 </div>
                 <img
