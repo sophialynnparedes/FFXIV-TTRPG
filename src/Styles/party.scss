@@ -10,6 +10,12 @@
     justify-content: space-evenly;
 }
 
+@media (max-width: 1000px) {
+    #partyMemberSelector {
+        flex-direction: column;
+    }
+}
+
 .partyMemberChooser {
     display: flex;
     align-items: center;
@@ -39,12 +45,10 @@
 
 .partyMember {
     width: 25%;
-    height: 700px;
+    max-height: 750px;
     overflow: hidden;
 }
 
 .partyMemberImage {
-    width: 200%;
-    height: 200%;
-    transform: translateX(-25%);
+    width: 100%;
 }

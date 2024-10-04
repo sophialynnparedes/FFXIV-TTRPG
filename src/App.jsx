@@ -8,6 +8,7 @@ import Home from "./Pages/Home.jsx";
 
 export default function App() {
     const [user, loading, error] = useAuthState(auth);
+
     if (loading) {
         return;
     }
@@ -19,7 +20,10 @@ export default function App() {
     } else {
         return (
             <>
-                <img id="background" src="background.webp" />
+                <img
+                    id="background"
+                    src="background.webp"
+                />
                 <Navbar />
                 <Router>
                     <PageRouter />
