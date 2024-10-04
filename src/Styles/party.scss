@@ -1,0 +1,50 @@
+#partyMemberSelectorContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#partyMemberSelector {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.partyMemberChooser {
+    display: flex;
+    align-items: center;
+}
+
+.partyMemberChooser * {
+    margin: 5px;
+}
+
+#partyContainerContainer {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#partyContainer {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.partyMember {
+    width: 25%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.partyMemberImage {
+    width: 200%;
+    height: 200%;
+    transform: translateX(-25%);
+}

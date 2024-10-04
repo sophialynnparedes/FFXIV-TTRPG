@@ -7,7 +7,7 @@ import Story from "./Pages/Story";
 export default function PageRouter() {
     return (
         <Switch>
-            <Route path="/" component={Story} />
+            <Route path="/story" component={Story} />
             <Route path="/party" component={Party} />
             <Route path="/enemies" component={Enemies} />
             <Route path="/NPCs" component={NPCs} />

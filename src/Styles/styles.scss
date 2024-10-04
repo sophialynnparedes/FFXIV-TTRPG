@@ -6,6 +6,12 @@ body {
     overflow: hidden;
 }
 
+body * {
+    font-family: "Yatra One", system-ui;
+    padding: 0;
+    margin: 0;
+}
+
 p,
 h1,
 h2,
@@ -16,6 +22,13 @@ h6,
 span {
     color: #cfb575;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+h2 {
+    font-size: 30px;
+    color: #cfb575;
+    text-shadow: -1px -1 px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
         1px 1px 0 #000;
 }
 
@@ -45,23 +58,14 @@ a {
     z-index: -1;
 }
 
-#setup {
-    width: 80%;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 #navbar {
     width: 100%;
-    height: 100px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .link {
@@ -70,6 +74,41 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.navbarButton {
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.navbarButton:hover h2 {
+    color: white;
+}
+
+.link:hover h2 {
+    color: white;
+}
+
+#musicContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#musicSelector {
+    margin-left: 10px;
+}
+
+#playButton {
+    margin-left: 10px;
 }
 
 #party {
@@ -83,4 +122,22 @@ a {
     height: calc(100% - 100px);
 }
 
+@media (max-width: 1200px) {
+    .link h2 {
+        display: none;
+    }
+
+    .navbarButton h2 {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    #navbar {
+        flex-wrap: wrap;
+    }
+}
+
 @import "./googleSignInButton.scss";
+@import "./story.scss";
+@import "./party.scss";
